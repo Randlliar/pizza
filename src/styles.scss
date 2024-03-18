@@ -1,1 +1,528 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("./assets/fonts/MullerRegular.otf");
+}
+
+@font-face {
+  font-family: MullerBold;
+  src: url("./assets/fonts/MullerBold.otf");
+}
+
+@font-face {
+  font-family: MullerExtraBold;
+  src: url("./assets/fonts/MullerExtraBold.otf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Muller, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: rgb(255, 175, 24);
+  width: 224px;
+  height: 60px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: MullerBold, sans-serif;
+  color: rgb(56, 36, 0);
+  text-decoration: none;
+  text-align: center;
+  padding: 22px;
+  display: inline-block;
+}
+
+.product-action .btn.btn-white {
+  background: transparent;
+  border: 1px solid rgb(255, 175, 24);
+  color: rgb(255, 175, 24);
+}
+
+/*1024 - 1229*/
+@media screen and (max-width: 1229px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/*768 - 1023*/
+@media screen and (max-width: 1023px) {
+  .menu ul {
+    width: 420px;
+  }
+}
+
+/*425 - 767*/
+@media screen and (max-width: 767px) {
+  .header .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 390px;
+  }
+
+  .menu {
+    order: 3;
+    margin-top: 15px;
+    flex-basis: 100%;
+  }
+
+  .menu ul {
+    max-width: 390px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .header .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .menu {
+    display: none;
+
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  .menu ul li a {
+    font-size: 35px;
+    color: #ffaf18;
+  }
+
+  .menu-item {
+    margin: 15px 0;
+  }
+
+
+  .burger {
+    display: block;
+    /*position: fixed;*/
+    margin-right: 20px;
+  }
+  .burger svg {
+    width: 36px;
+    height: 36px;
+    fill: #ffd89d;
+  }
+  .menu.open {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.80);
+  }
+
+  .menu .close {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: #ffaf18;
+    position: absolute;
+    top: 20px;
+    left: 20px
+  }
+}
+
+
+.main {
+  margin: 132px 0 81px 0;
+}
+
+.main .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-info {
+  max-width: 622px;
+}
+
+.main-info h1 {
+  font-size: 45px;
+  font-family: MullerExtraBold, sans-serif;
+  line-height: 1.222;
+}
+
+.double-title {
+  color: rgb(185, 145, 80);
+}
+
+.double-title span {
+  color: #ffaf18;
+}
+
+.main-advantages {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantage {
+  max-width: 306px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 47px;
+}
+
+.advantage-txt {
+  margin-left: 16px;
+}
+
+.advantage-title {
+  font-size: 16px;
+  font-family: MullerExtraBold, sans-serif;
+  color: rgb(255, 175, 24);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.advantage-desc {
+  font-size: 16px;
+  color: rgb(185, 145, 80);
+}
+
+.main-action {
+  margin-top: 13px;
+}
+
+
+#particles-js {
+  width: 100%;
+  height: 380px;
+  //background: #ffffff url("../assets/images/pizza_big.png") center;
+  background-size: cover;
+}
+
+.products-items {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.order {
+  padding: 120px 0 115px 0;
+  overflow: hidden;
+}
+
+.order .container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.order-form {
+  margin-left: 122px;
+  max-width: 330px;
+}
+
+.order-txt {
+  max-width: 384px;
+}
+
+.order-txt-title {
+  font-size: 35px;
+  font-family: MullerExtraBold, sans-serif;
+  margin-bottom: 65px;
+}
+
+.order-txt-message {
+  font-size: 16px;
+  color: rgb(185, 145, 80);
+  line-height: 1.5;
+}
+
+.order-inp {
+  border-width: 1px;
+  border-color: rgb(185, 145, 80);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  width: 330px;
+  font-size: 18px;
+  color: rgb(134, 103, 52);
+  padding: 23px 22px 24px 22px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+  height: 60px;
+  outline: none;
+}
+
+.order-inp::placeholder {
+  color: rgb(203, 168, 110);
+}
+
+.order .btn {
+  width: 330px;
+  height: 60px;
+}
+
+.order-img {
+  width: 282px;
+  position: relative;
+  margin-left: 78px;
+}
+
+.order-img img {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+}
+
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.parallax-window {
+  min-height: 300px;
+  background: transparent;
+}
+
+.cookie {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  max-width: 330px;
+}
+
+.cookie-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: MullerBold, sans-serif;
+}
+
+.cookie-title span {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.cookie-text {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.cookie-button .btn {
+  border: 0;
+  outline: none;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/*1024 - 1229*/
+@media screen and (max-width: 1229px) {
+  .main-img {
+    width: 400px;
+  }
+
+  .main-img img {
+    max-width: 100%;
+  }
+
+  .products-items {
+    justify-content: center;
+  }
+
+  .product {
+    margin: 12px;
+  }
+
+  .order-form {
+    margin-left: 45px;
+  }
+
+  .order .container {
+    max-width: 1024px;
+  }
+}
+
+/*768 - 1023*/
+@media screen and (max-width: 1023px) {
+  .main .container {
+    flex-direction: column;
+  }
+
+  .main-info {
+    order: 1;
+  }
+
+  .main {
+    margin-top: 70px;
+  }
+
+  .main-info h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .main-action {
+    text-align: center;
+  }
+
+  .products {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .order {
+    padding-top: 60px;
+    position: relative;
+  }
+
+  .order-img {
+    position: absolute;
+    z-index: -1;
+    right: calc(50% - 400px);
+  }
+
+  .order-img img {
+    position: relative;
+  }
+
+  .order .container {
+    justify-content: center;
+  }
+}
+
+/*425 - 767*/
+@media screen and (max-width: 767px) {
+  .cart {
+    margin-left: 20px;
+  }
+
+  .main-info h1 {
+    line-height: 45px;
+  }
+
+  .main-advantages {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .order .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order-txt-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .order-txt-message {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .order-form {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 656px) {
+  .main-advantages {
+    max-width: 306px;
+  }
+}
+
+/*375 - 424*/
+@media screen and (max-width: 424px) {
+  .main-img {
+    width: 100%;
+  }
+
+}
+
+/*320 - 374*/
+@media screen and (max-width: 374px) {
+  .main-info h1 {
+    font-size: 38px;
+  }
+
+  .order-inp {
+    width: 290px;
+  }
+
+  .order-form {
+    text-align: center;
+  }
+
+  .order .btn {
+    width: 290px;
+  }
+}
+
+.loader-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.49);
+}
+
+.loader {
+  border: 15px solid #f3f3f3;
+  border-top: 15px solid #ffaf18;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
